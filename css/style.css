@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+header{
+    height: 100vh;
+    background: url("../img/background_header.jpg") no-repeat center center/ auto;
+}
+
+footer + div{
+    top: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: #fffffff5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.none{
+    display: none;
+}
+
+.popup{
+    animation: pop 0.9s;
+}
+
+@keyframes pop {
+    0%{
+        transform: scale(0);
+    }
+
+    50%{
+        transform: scale(1.6);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.none2{
+    animation: none_2 0.9s;
+
+}
+
+@keyframes none_2 {
+    0%{
+        transform: scale(1.6);
+    }
+
+    50%{
+        transform: scale(0.9);
+    }
+
+    100%{
+        transform: scale(0.1);
+
+    }
+}
+
+footer + div .container{
+    width: 30%;
+    height: 50%;
+    background: currentColor;
+    padding: 26px;
+
+}
+
+footer + div .container h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+input{
+    flex-basis: 100%;
+}
+
+input.error{
+    outline-color: red;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+button{
+    flex-basis: 50%;
+}
+
+
+@media only screen and (max-width:500px) {
+    footer + div .container{
+        width: 80%;
+        height: 40%;
+    }
+    footer + div .container h1 {
+        font-size: 1.5rem;
+    }
+    input,button{
+        width: 100%;
+    }
+
+}
