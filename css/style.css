@@ -186,6 +186,7 @@ div > div > img{
     height: 100%;
 }
 
+
 @media only screen and ( max-width: 400px ) {
     .slider {
         flex-basis: 80%;
