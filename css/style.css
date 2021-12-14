@@ -9,117 +9,185 @@
     box-sizing: border-box;
 }
 
+/*body{*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*header{*/
+/*    height: 100vh;*/
+/*    background: url("../img/background_header.jpg") no-repeat center center/ auto;*/
+/*}*/
+
+/*footer + div{*/
+/*    top: 0;*/
+/*    position: absolute;*/
+/*    height: 100vh;*/
+/*    width: 100%;*/
+/*    background: #ffffffff;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+
+
+/*.none{*/
+/*    display: none;*/
+/*}*/
+
+/*.popup{*/
+/*    animation: pop 0.9s;*/
+/*}*/
+
+/*@keyframes pop {*/
+/*    0%{*/
+/*        transform: scale(0);*/
+/*    }*/
+
+/*    50%{*/
+/*        transform: scale(1.6);*/
+/*    }*/
+
+/*    100%{*/
+/*        transform: scale(1);*/
+/*    }*/
+/*}*/
+
+/*.none2{*/
+/*    animation: none_2 0.9s;*/
+
+/*}*/
+
+/*@keyframes none_2 {*/
+/*    0%{*/
+/*        transform: scale(1.6);*/
+/*    }*/
+
+/*    50%{*/
+/*        transform: scale(0.9);*/
+/*    }*/
+
+/*    100%{*/
+/*        transform: scale(0.1);*/
+
+/*    }*/
+/*}*/
+
+/*footer + div .container{*/
+/*    width: 30%;*/
+/*    height: 50%;*/
+/*    background: currentColor;*/
+/*    padding: 26px;*/
+
+/*}*/
+
+/*footer + div .container h1{*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    font-size: 2rem;*/
+/*    margin: 10px 0;*/
+/*}*/
+
+/*form{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*    row-gap: 2rem;*/
+/*}*/
+
+/*input{*/
+/*    flex-basis: 100%;*/
+/*}*/
+
+/*input.error{*/
+/*    outline-color: red;*/
+/*    outline-width: 2px;*/
+/*    outline-style: solid;*/
+/*}*/
+
+/*button{*/
+/*    flex-basis: 50%;*/
+/*}*/
+
+
+/*@media only screen and (max-width:500px) {*/
+/*    footer + div .container{*/
+/*        width: 80%;*/
+/*        height: 40%;*/
+/*    }*/
+/*    footer + div .container h1 {*/
+/*        font-size: 1.5rem;*/
+/*    }*/
+/*    input,button{*/
+/*        width: 100%;*/
+/*    }*/
+
+/*}*/
+
 body{
+    /* overflow: hidden; */
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.slider{
+    display: flex;
+    overflow: hidden;
+    flex-basis: 35%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.tofs{
+    display: flex;
+    /* overflow: hidden; */
+    /* flex-basis: 35%; */
+    flex-wrap: wrap;
+    position: absolute;
+    /* top: 144px; */
+    animation: slide 60s linear infinite;
+    gap: 28px;
+    background: rebeccapurple;
+}
+
+
+@keyframes slide {
+    0%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.tofs > div{
+    width: 100%;
+    height: 100vh;
+}
+
+div > div > img{
+    width: 100%;
+    height: 100%;
+}
+
+.image{
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
-header{
-    height: 100vh;
-    background: url("../img/background_header.jpg") no-repeat center center/ auto;
-}
-
-footer + div{
-    top: 0;
-    position: absolute;
-    height: 100vh;
+.image > img{
     width: 100%;
-    background: #fffffff5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
 }
 
-
-
-.none{
-    display: none;
-}
-
-.popup{
-    animation: pop 0.9s;
-}
-
-@keyframes pop {
-    0%{
-        transform: scale(0);
+@media only screen and ( max-width: 400px ) {
+    .slider {
+        flex-basis: 80%;
     }
-
-    50%{
-        transform: scale(1.6);
-    }
-
-    100%{
-        transform: scale(1);
-    }
-}
-
-.none2{
-    animation: none_2 0.9s;
-
-}
-
-@keyframes none_2 {
-    0%{
-        transform: scale(1.6);
-    }
-
-    50%{
-        transform: scale(0.9);
-    }
-
-    100%{
-        transform: scale(0.1);
-
-    }
-}
-
-footer + div .container{
-    width: 30%;
-    height: 50%;
-    background: currentColor;
-    padding: 26px;
-
-}
-
-footer + div .container h1{
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    margin: 10px 0;
-}
-
-form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 2rem;
-}
-
-input{
-    flex-basis: 100%;
-}
-
-input.error{
-    outline-color: red;
-    outline-width: 2px;
-    outline-style: solid;
-}
-
-button{
-    flex-basis: 50%;
-}
-
-
-@media only screen and (max-width:500px) {
-    footer + div .container{
-        width: 80%;
-        height: 40%;
-    }
-    footer + div .container h1 {
-        font-size: 1.5rem;
-    }
-    input,button{
-        width: 100%;
-    }
-
 }
