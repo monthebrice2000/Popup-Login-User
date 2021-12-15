@@ -166,12 +166,10 @@
     /* overflow: hidden; */
     /* flex-basis: 35%; */
     flex-wrap: wrap;
-    will-change: transform;
-    will-change: animation;
 
     /* top: 144px; */
     -moz-animation: slide 60s linear infinite;
-    -webkit-animation: slide 60s ease-in-out infinite reverse;
+    -webkit-animation: slide 60s ease-in-out infinite;
     -o-animation: slide 60s ease-in-out infinite;;
     gap: 28px;
     /*background: rebeccapurple;*/
